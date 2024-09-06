@@ -5,7 +5,7 @@
 
 int main()
 {
-	// Declare and zero-initialize the map that will be used to hold the key scancodes
+	// Declare and initialize the map that will be used to hold the key scancodes
 
 	std::map<char, UINT> keyToScanCode{};
 
