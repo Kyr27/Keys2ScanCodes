@@ -22,8 +22,10 @@ int main()
 			continue;
 		}
 
+		// Get the lower byte only, because that is the one that contains the virtual keycode (the higher byte contains the shift state)
 		int virtualKeyCode = vk & 0xFF;
 
+		// Push the key along with it's scan code into keyToScanCode
 		keyToScanCode[key] = MapVirtualKey(virtualKeyCode, MAPVK_VK_TO_VSC);
 	}
 
@@ -36,7 +38,6 @@ int main()
 	if (keyToScanCode.find(key) != keyToScanCode.end())
 	{
 		// If it exists then output the key and its scancode to the console
-
 		std::cout << "The scancode of key: " << key << " is " << keyToScanCode[key] << '\n';
 	}
 	else
