@@ -23,7 +23,7 @@ int main()
 		}
 
 		// Get the lower byte only, because that is the one that contains the virtual keycode (the higher byte contains the shift state)
-		int virtualKeyCode = vk & 0xFF;
+		UINT virtualKeyCode = vk & 0xFF;
 
 		// Push the key along with it's scan code into keyToScanCode
 		keyToScanCode[key] = MapVirtualKey(virtualKeyCode, MAPVK_VK_TO_VSC);
